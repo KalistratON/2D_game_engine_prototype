@@ -1,0 +1,10 @@
+[submodule "glfw"]
+	path = glfw
+	url = http://github.com/glfw/glfw
+[submodule "glew"]
+	path = glew
+	url = http://github.com/Perlmint/glew-cmake
+[submodule "glm-all"]
+	path = glm-all
+	url = http://github.com/gmfCoding/glm-all
+
