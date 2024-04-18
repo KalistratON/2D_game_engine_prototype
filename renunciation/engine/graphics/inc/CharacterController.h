@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Animation.h"
+#include "Base_Helper.h"
 #include "GameObject.h"
 #include "OpenGL.h"
 
@@ -35,9 +36,9 @@ private:
 
 public:
 
-    CharacterController (GameObject& theGameObject, 
+    _GRAPHICS_EXPORT CharacterController (GameObject& theGameObject, 
                          const glm::uvec2& theCountAnimation);
-    void update (GLFWwindow* window, float theDeltaTime);
+    _GRAPHICS_EXPORT void update (GLFWwindow* window, float theDeltaTime);
 
 private:
     

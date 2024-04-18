@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Base_Helper.h"
 #include "Buffer.h"
 
 #include <GL/glew.h>
@@ -10,14 +11,14 @@ class BufferManager
 {
 public:
     
-    BufferManager (std::uint32_t theDrawMode);
+    _GRAPHICS_EXPORT BufferManager (std::uint32_t theDrawMode);
 
-    bool create (size_t theVertexCount);
-    void bind();
+    _GRAPHICS_EXPORT bool create (size_t theVertexCount);
+    _GRAPHICS_EXPORT void bind();
 
-    void replaceData     (size_t theOffset,
+    _GRAPHICS_EXPORT void replaceData     (size_t theOffset,
                           std::vector <float> theData);
-    void replaceIndecies (size_t theOffset,
+    _GRAPHICS_EXPORT void replaceIndecies (size_t theOffset,
                           std::vector <std::uint32_t> theIndecies);
 
 private:

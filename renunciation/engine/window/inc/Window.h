@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Base_Helper.h"
+
 #include <GLFW/glfw3.h>
 
 #include <cstdint>
@@ -9,13 +11,13 @@ class Window
 
 public:
 
-    Window (std::int32_t theWidth, std::int32_t theHeight);
-    ~Window();
+    _WINDOW_EXPORT Window (std::int32_t theWidth, std::int32_t theHeight);
+    _WINDOW_EXPORT ~Window();
 
-    GLFWwindow* data();
+    _WINDOW_EXPORT GLFWwindow* data();
 
-    bool shouldClose();
-    void swapBuffers();
+    _WINDOW_EXPORT bool shouldClose();
+    _WINDOW_EXPORT void swapBuffers();
 
 private:
 

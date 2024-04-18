@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Base_Helper.h"
 #include <glm-all/ext/vector_int2.hpp>
 #include <string>
 
@@ -10,22 +11,22 @@ class Texture
 
 public:
 
-    Texture() = default;
+    _GRAPHICS_EXPORT Texture() = default;
 
-    void create (const glm::ivec2&  theTextureSize);
-    void create (const std::string& theFileName);
+    _GRAPHICS_EXPORT void create (const glm::ivec2&  theTextureSize);
+    _GRAPHICS_EXPORT void create (const std::string& theFileName);
 
-    void update (const std::uint8_t* thePixels, 
+    _GRAPHICS_EXPORT void update (const std::uint8_t* thePixels, 
                  const glm::ivec2&   theLeftUpCorner,
                  const glm::ivec2&   theOffset);
 
-    void generateMipMaps();
-    void setRepeat (bool theIsRepeat);
+    _GRAPHICS_EXPORT void generateMipMaps();
+    _GRAPHICS_EXPORT void setRepeat (bool theIsRepeat);
 
-    const glm::ivec2& getSize ();
+    _GRAPHICS_EXPORT const glm::ivec2& getSize ();
     
-    void bind();
-    static void bind (std::uint32_t theID);
+    _GRAPHICS_EXPORT void bind();
+    _GRAPHICS_EXPORT static void bind (std::uint32_t theID);
 
 private:
 

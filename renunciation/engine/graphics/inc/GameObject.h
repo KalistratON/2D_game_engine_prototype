@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Base_Helper.h"
 #include "Shader.h"
 #include "Sprite.h"
 
@@ -13,12 +14,12 @@ class GameObject
 
 public:
 
-    GameObject (Shader& theShader,
+    _GRAPHICS_EXPORT GameObject (Shader& theShader,
                 const Sprite& theSprite) :
         myShader     (theShader),
         mySprite     (theSprite)
     {};
-    void draw (RenderManager& theRenderManager);
+    _GRAPHICS_EXPORT void draw (RenderManager& theRenderManager);
 
 private:
 

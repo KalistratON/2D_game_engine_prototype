@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Base_Helper.h"
+
 #include <glm-all/ext/vector_float4.hpp>
 
 namespace engine {
@@ -9,9 +11,9 @@ class Animation
 
 public:
 
-    Animation (size_t theWidth, size_t theHeight);
-    glm::vec4 next (float theDeltaTime);
-    glm::vec4 swap (float theDeltaTime);
+    _GRAPHICS_EXPORT Animation (size_t theWidth, size_t theHeight);
+    _GRAPHICS_EXPORT glm::vec4 next (float theDeltaTime);
+    _GRAPHICS_EXPORT glm::vec4 swap (float theDeltaTime);
 
 private:
 
