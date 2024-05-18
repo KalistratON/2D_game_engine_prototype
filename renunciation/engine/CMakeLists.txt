@@ -1,2 +1,1 @@
-add_subdirectory (graphics)
-add_subdirectory (window)
+add_subdirectory (basiclibrary)

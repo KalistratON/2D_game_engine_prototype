@@ -10,15 +10,14 @@ namespace engine {
 class BufferManager
 {
 public:
-    
-    _GRAPHICS_EXPORT BufferManager (std::uint32_t theDrawMode);
+    _EXPORT BufferManager (std::uint32_t theDrawMode);
 
-    _GRAPHICS_EXPORT bool create (size_t theVertexCount);
-    _GRAPHICS_EXPORT void bind();
+    _EXPORT bool create (size_t theVertexCount);
+    _EXPORT void bind();
 
-    _GRAPHICS_EXPORT void replaceData     (size_t theOffset,
+    _EXPORT void replaceData     (size_t theOffset,
                           std::vector <float> theData);
-    _GRAPHICS_EXPORT void replaceIndecies (size_t theOffset,
+    _EXPORT void replaceIndecies (size_t theOffset,
                           std::vector <std::uint32_t> theIndecies);
 
 private:

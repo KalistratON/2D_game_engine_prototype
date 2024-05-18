@@ -42,9 +42,8 @@ void Sprite::defaultInitialization()
 }
 
 Sprite::Sprite (Texture& theTexture,
-                std::uint32_t theDrawMode,
                 const glm::vec4& theTextureRect) :
-    myDataStorage (theDrawMode),
+    myDataStorage (GL_DYNAMIC_DRAW),
     myTexture     (theTexture),
     myTexRect     (theTextureRect),
     Transformable::Transformable()
@@ -57,9 +56,8 @@ Sprite::Sprite (Texture&  theTexture,
                 const glm::vec2& theTranslation,
                 const glm::vec2& theScale,
                 const Angle&     theAngle,
-                std::uint32_t    theDrawMode,
                 const glm::vec4& theTextureRect) :
-    myDataStorage (theDrawMode),
+    myDataStorage (GL_DYNAMIC_DRAW),
     myTexture     (theTexture),
     myTexRect     (theTextureRect),
     Transformable::Transformable (theOrigin, theTranslation, theScale, theAngle)

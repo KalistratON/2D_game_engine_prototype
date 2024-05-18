@@ -15,11 +15,6 @@ target_include_directories (graphics PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/glfw/in
 target_include_directories (graphics PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/glew/include)
 target_include_directories (graphics PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/glm-all)
 
-target_include_directories (window PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/glfw/include)
-target_include_directories (window PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/glew/include)
-target_include_directories (window PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/glm-all)
-
-target_include_directories (renunciation PRIVATE ${renunciation_SOURCE_DIR}/renunciation/engine/graphics/inc)
-target_include_directories (renunciation PRIVATE ${renunciation_SOURCE_DIR}/renunciation/engine/window/inc)
+target_include_directories (renunciation PRIVATE ${renunciation_SOURCE_DIR}/renunciation/engine/basic/graphics/inc)
 
 file(COPY resources/ DESTINATION ${PROJECT_BINARY_DIR}/resources/)

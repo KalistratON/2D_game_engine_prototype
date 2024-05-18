@@ -75,14 +75,12 @@ bool Shader::linkShader()
     return GL_TRUE;
 }
 
-Shader::Shader (const std::vector<std::int32_t>& theTypeList, const std::vector<const char*>& thePathList)
+Shader::Shader (const char* theVertexShader, const char* theFragmentShader)
 {
-    if (theTypeList.size() == thePathList.size()) {
-        for (size_t i = 0; i < theTypeList.size(); ++i) {
-            auto aSource = ReadFile(thePathList.at(i));
-            compileShader(theTypeList.at(i), aSource.c_str());
-        }
-    }
+    auto aSource = ReadFile (theVertexShader);
+    compileShader(GL_VERTEX_SHADER, aSource.c_str());
+    aSource = ReadFile (theFragmentShader);
+    compileShader(GL_FRAGMENT_SHADER, aSource.c_str());
     if (!linkShader()) {
         throw std::exception ("LINK ERROR");
     }

@@ -8,25 +8,23 @@ namespace engine {
 
 class Texture
 {
-
 public:
+    _EXPORT Texture() = default;
 
-    _GRAPHICS_EXPORT Texture() = default;
+    _EXPORT void create (const glm::ivec2&  theTextureSize);
+    _EXPORT void create (const std::string& theFileName);
 
-    _GRAPHICS_EXPORT void create (const glm::ivec2&  theTextureSize);
-    _GRAPHICS_EXPORT void create (const std::string& theFileName);
-
-    _GRAPHICS_EXPORT void update (const std::uint8_t* thePixels, 
+    _EXPORT void update (const std::uint8_t* thePixels, 
                  const glm::ivec2&   theLeftUpCorner,
                  const glm::ivec2&   theOffset);
 
-    _GRAPHICS_EXPORT void generateMipMaps();
-    _GRAPHICS_EXPORT void setRepeat (bool theIsRepeat);
+    _EXPORT void generateMipMaps();
+    _EXPORT void setRepeat (bool theIsRepeat);
 
-    _GRAPHICS_EXPORT const glm::ivec2& getSize ();
+    _EXPORT const glm::ivec2& getSize ();
     
-    _GRAPHICS_EXPORT void bind();
-    _GRAPHICS_EXPORT static void bind (std::uint32_t theID);
+    _EXPORT void bind();
+    _EXPORT static void bind (std::uint32_t theID);
 
 private:
 

@@ -1,5 +1,4 @@
 #include "../inc/Drawable.h"
-#include "../inc/GameObject.h"
 #include "../inc/glCheckError.h"
 #include "../inc/RenderManager.h"
 
@@ -23,12 +22,6 @@ void RenderManager::draw (Drawable& theEntity)
 {
     theEntity.draw (*this);
 }
-
-void RenderManager::draw (GameObject& theEntity)
-{
-    theEntity.draw (*this);
-}
-
 
 void RenderManager::draw ()
 {

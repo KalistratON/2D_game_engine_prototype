@@ -9,7 +9,7 @@ class RenderManager;
 class Drawable
 {
 public:
-    _GRAPHICS_EXPORT virtual void draw (RenderManager& theRenderManager) = 0;
+    _EXPORT virtual void draw (RenderManager& theRenderManager) = 0;
 };
 
 }
